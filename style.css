@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.todo-container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #1c1c3c;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  width: 180px;
+  border: 1px solid #ddd;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  color: #1c1c3c;
+  width: 100%;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #1c1c3c;
+  margin-right: 5px;
+}
+
+/* Add Task Button */
+.add-task {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: none;
+  color: #999;
+}
+
+.add-task input::placeholder {
+  color: #999;
+}
+
+#addBtn {
+  background-color: #f05a28; /* Orange color for the "Add" button */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#todoList {
+  list-style: none;
+}
+
+/* Style for task item */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.task-item label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* Style for radio button */
+.task-item input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f05a28;
+  border-radius: 50%;
+  outline: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.task-item input[type="radio"]:checked {
+  background-color: #f05a28;
+}
+
+/* Task text styling */
+.task-text {
+  color: #1c1c3c;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Three-dot menu */
+.three-dots {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  position: relative;
+}
+
+.menu-options {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.menu-options button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.menu-options button:hover {
+  background-color: #f5f5f5;
+}
